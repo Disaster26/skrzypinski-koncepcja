@@ -91,7 +91,8 @@
   function wczytaj3D() {
     import('./scena3d.js?v=2').then(function (m) { m.start(scena, $('#konf')); }).catch(bezGL);
   }
-  if (!maGL() || !('IntersectionObserver' in window) || !('ResizeObserver' in window)) bezGL();
+  var UZYJ_3D = false; // 23.10: model three.js wylaczony do czasu fotorealistycznych renderow - pokazujemy zdjecia realizacji
+  if (!UZYJ_3D || !maGL() || !('IntersectionObserver' in window) || !('ResizeObserver' in window)) bezGL();
   else {
     var io3 = new IntersectionObserver(function (en) {
       if (en.some(function (x) { return x.isIntersecting; })) { io3.disconnect(); wczytaj3D(); }
