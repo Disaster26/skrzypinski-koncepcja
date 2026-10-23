@@ -30,10 +30,10 @@
   } else if (rys) rys.classList.add('widac');
 
   /* ---------- dolny pasek na telefonie ---------- */
-  var mob = $('#mob'), heroCta = $('.hero-cta'), dobierz = $('#dobierz');
-  var zaCta = false, wDobierz = false;
+  var mob = $('#mob'), heroCta = $('.hero-cta');
+  var zaCta = false;
   function pasek() {
-    var w = zaCta && !wDobierz;
+    var w = zaCta;
     mob.classList.toggle('widac', w);
     mob.setAttribute('aria-hidden', String(!w));
     $$('a', mob).forEach(function (a) { a.tabIndex = w ? 0 : -1; });
@@ -43,104 +43,7 @@
       en.forEach(function (x) { zaCta = !x.isIntersecting && x.boundingClientRect.top < 0; });
       pasek();
     }).observe(heroCta);
-    new IntersectionObserver(function (en) {
-      en.forEach(function (x) { wDobierz = x.isIntersecting; });
-      pasek();
-    }, { rootMargin: '-30% 0px -30% 0px' }).observe(dobierz);
   }
-
-  /* ---------- konfigurator ---------- */
-  var MAT = {
-    'mos-pol': { n: 'Mosiądz polerowany' },
-    'mos-pat': { n: 'Mosiądz patynowany' },
-    'mos-mat': { n: 'Mosiądz matowy' },
-    'st-pol': { n: 'Stal nierdzewna polerowana' },
-    'st-szcz': { n: 'Stal nierdzewna szczotkowana' }
-  };
-  var TYP = { prosta: 'schodowa prosta', luk: 'schodowa gięta po łuku', taras: 'tarasowa lub balkonowa' };
-  var WYP = { prety: 'pręty wzdłużne', tralki: 'tralki pionowe', szklo: 'szkło bezpieczne' };
-  // zdjecie realizacji pokazywane zamiast modelu 3D, gdy przegladarka nie ma WebGL2
-  function zdjecie(mk, typ, wyp, poch2) {
-    var st = mk.indexOf('st') === 0;
-    if (wyp === 'szklo') return poch2 ? ['b-st-12', 'Szkło bezpieczne i drewniany pochwyt, stal nierdzewna matowa'] : ['b-st-9', 'Szkło bezpieczne w klatce schodowej, stal nierdzewna polerowana'];
-    if (typ === 'taras') return st ? ['b-st-6', 'Balustrada tarasowa, stal nierdzewna polerowana'] : ['b-mos-1', 'Balustrada antresoli, mosiądz patynowany'];
-    if (typ === 'luk') {
-      if (st) return ['b-st-3', 'Pręty ze stali nierdzewnej gięte po łuku schodów'];
-      return wyp === 'tralki' ? ['b-mos-12', 'Tralki pionowe na schodach kręconych, mosiądz polerowany'] : ['b-mos-14', 'Pręty gięte wzdłuż schodów kręconych, mosiądz patynowany'];
-    }
-    return st ? ['b-st-2', 'Schody drewniane z balustradą ze stali nierdzewnej matowej'] : ['b-mos-11', 'Balustrada gięta przy schodach zabiegowych, mosiądz polerowany'];
-  }
-  var zdj = $('#scenaZdj');
-
-  function rysuj() {
-    var fd = new FormData($('#konf'));
-    var mk = fd.get('mat'), typ = fd.get('typ'), wyp = fd.get('wyp'), poch2 = fd.get('poch') === 'drewno';
-    var M = MAT[mk];
-    var z = zdjecie(mk, typ, wyp, poch2), src = 'img/' + z[0] + '.jpg';
-    if (zdj.getAttribute('src') !== src) { zdj.src = src; zdj.alt = z[1]; }
-    $('#scenaOpis').textContent = M.n + ', ' + TYP[typ] + ', ' + WYP[wyp] + (poch2 ? ', pochwyt drewniany' : '');
-    tekst(M.n, typ, wyp, poch2);
-  }
-
-  /* scena 3D: three.js wczytywany dopiero, gdy konfigurator zbliza sie do ekranu */
-  var scena = $('#scena');
-  function bezGL() { scena.classList.remove('gl'); scena.classList.add('bez-gl'); }
-  function maGL() {
-    try { return !!(window.WebGL2RenderingContext && document.createElement('canvas').getContext('webgl2')); } catch (e) { return false; }
-  }
-  function wczytaj3D() {
-    import('./scena3d.js?v=2').then(function (m) { m.start(scena, $('#konf')); }).catch(bezGL);
-  }
-  var UZYJ_3D = false; // 23.10: model three.js wylaczony do czasu fotorealistycznych renderow - pokazujemy zdjecia realizacji
-  if (!UZYJ_3D || !maGL() || !('IntersectionObserver' in window) || !('ResizeObserver' in window)) bezGL();
-  else {
-    var io3 = new IntersectionObserver(function (en) {
-      if (en.some(function (x) { return x.isIntersecting; })) { io3.disconnect(); wczytaj3D(); }
-    }, { rootMargin: '900px 0px' });
-    io3.observe(scena);
-  }
-
-  var plik = null;
-  function tekst(mn, typ, wyp, poch2) {
-    var dl = $('#dl').value.trim().replace('.', ','), pi = $('#pietro').value, mi = $('#miasto').value.trim(), im = $('#imie').value.trim();
-    var t = 'Dzień dobry,\nproszę o wycenę balustrady.\n\n' +
-      'Wykończenie: ' + mn + '\n' +
-      'Rodzaj: ' + TYP[typ] + '\n' +
-      'Wypełnienie: ' + WYP[wyp] + '\n' +
-      'Pochwyt: ' + (poch2 ? 'drewniany' : 'z tego samego metalu') + '\n' +
-      (dl ? 'Długość: ok. ' + dl + ' mb\n' : '') +
-      (pi ? 'Gdzie: ' + pi + '\n' : '') +
-      (mi ? 'Miejscowość: ' + mi + '\n' : '') +
-      (plik ? 'Zdjęcie schodów: w załączniku\n' : '') +
-      '\nProszę o kontakt.' + (im ? '\n' + im : '');
-    $('#tresc').textContent = t;
-    var temat = 'Zapytanie o balustradę: ' + mn.toLowerCase() + (mi ? ', ' + mi : '');
-    $('#mailBtn').href = 'mailto:biuro@balustrady-skrzypinski.pl?subject=' + encodeURIComponent(temat) + '&body=' + encodeURIComponent(t);
-    $('#smsBtn').href = 'sms:+48600458425?&body=' + encodeURIComponent(t);
-  }
-
-  var konf = $('#konf');
-  konf.addEventListener('change', rysuj);
-  konf.addEventListener('input', function (e) { if (e.target.matches('input[type=text],input[type=number]')) rysuj(); });
-  konf.addEventListener('submit', function (e) { e.preventDefault(); });
-
-  var foto = $('#foto'), podgl = $('#fotoPodglad'), share = $('#wyslijZFoto');
-  foto.addEventListener('change', function () {
-    plik = foto.files && foto.files[0] ? foto.files[0] : null;
-    if (plik) {
-      podgl.src = URL.createObjectURL(plik); podgl.hidden = false;
-      $('#fotoNap').textContent = 'Zmień zdjęcie';
-      var moze = navigator.canShare && navigator.canShare({ files: [plik] });
-      share.hidden = !moze;
-      $('#fotoUw').hidden = !!moze;
-    } else { podgl.hidden = true; share.hidden = true; $('#fotoUw').hidden = true; }
-    rysuj();
-  });
-  share.addEventListener('click', function () {
-    if (!plik) return;
-    navigator.share({ files: [plik], title: 'Zapytanie o balustradę', text: $('#tresc').textContent }).catch(function () {});
-  });
-  rysuj();
 
   /* ---------- galeria ---------- */
   var G = [

@@ -13,7 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css?v=2">
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"}}</script>
 <link rel="preload" as="image" href="img/hero.jpg">
 </head>
 <body>
@@ -50,7 +49,6 @@
       <a href="#karnisze">Karnisze gięte</a>
       <a href="#meble">Meble z mosiądzu</a>
       <a href="#realizacje">Realizacje</a>
-      <a href="#dobierz">Dobierz wykończenie</a>
       <a href="#pracownia">Pracownia i usługi</a>
       <a href="#kontakt">Kontakt i dojazd</a>
     </nav>
@@ -232,93 +230,6 @@
     </div>
     <div class="galeria" id="galeria"></div>
     <p class="gal-uw">Zdjęcia z dotychczasowych realizacji pracowni. Dotknij zdjęcia, żeby je powiększyć.</p>
-  </div>
-</section>
-
-<section class="sek dobierz" id="dobierz" aria-labelledby="h-dobierz">
-  <div class="wrap">
-    <div class="sek-glowa">
-      <h2 id="h-dobierz">Dobierz wykończenie</h2>
-      <p>Wybierz metal, kształt i wypełnienie. Model obok zmienia się od razu i można go obracać, a na końcu wyślesz gotowe zapytanie mailem albo SMS-em. Odpowiadamy z wyceną po rozmowie i pomiarze.</p>
-    </div>
-    <div class="konf">
-      <div class="scena-box">
-        <div class="scena" id="scena" role="img" aria-label="Model 3D balustrady w wybranym wykończeniu">
-          <img class="scena-zdj" id="scenaZdj" src="img/b-mos-14.jpg" width="747" height="500" loading="lazy" alt="Pręty gięte wzdłuż schodów kręconych, mosiądz patynowany">
-          <p class="scena-stan">Wczytuję model 3D</p>
-          <p class="scena-pod"><span class="pod-komp">Przeciągnij, żeby obrócić</span><span class="pod-tel">Przesuń w bok, żeby obrócić</span></p>
-        </div>
-        <p class="scena-opis" id="scenaOpis" aria-live="polite">Mosiądz patynowany, schodowa gięta po łuku, pręty wzdłużne</p>
-      </div>
-      <form class="opcje" id="konf" novalidate>
-        <fieldset>
-          <legend>Materiał i wykończenie</legend>
-          <div class="mat" role="radiogroup" aria-label="Materiał i wykończenie">
-            <label><input type="radio" name="mat" value="mos-pol"><span class="pr" data-m="mos-pol"></span><b>Mosiądz polerowany</b><small>wysoki połysk, ciepłe złoto</small></label>
-            <label><input type="radio" name="mat" value="mos-pat" checked><span class="pr" data-m="mos-pat"></span><b>Mosiądz patynowany</b><small>przyciemniony, głęboki brąz</small></label>
-            <label><input type="radio" name="mat" value="mos-mat"><span class="pr" data-m="mos-mat"></span><b>Mosiądz matowy</b><small>satynowy, bez refleksów</small></label>
-            <label><input type="radio" name="mat" value="st-pol"><span class="pr" data-m="st-pol"></span><b>Stal nierdzewna polerowana</b><small>lustrzany połysk</small></label>
-            <label><input type="radio" name="mat" value="st-szcz"><span class="pr" data-m="st-szcz"></span><b>Stal nierdzewna szczotkowana</b><small>mat z rysunkiem szlifu</small></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Rodzaj</legend>
-          <div class="seg" role="radiogroup" aria-label="Rodzaj balustrady">
-            <label><input type="radio" name="typ" value="prosta"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 26h8v-5h6v-5h6v-5h6V6h10"/><path d="M4 16 30 2h8"/></svg><span>Schodowa prosta</span></label>
-            <label><input type="radio" name="typ" value="luk" checked><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 24c10 4 22 2 30-8 3-4 5-9 6-14"/><path d="M2 14c10 4 20 1 27-8"/></svg><span>Schodowa gięta po łuku</span></label>
-            <label><input type="radio" name="typ" value="taras"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 24h36"/><path d="M2 8h28c4 0 8-2 8-5"/><path d="M8 8v16M20 8v16M32 7v17"/></svg><span>Tarasowa lub balkonowa</span></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Wypełnienie</legend>
-          <div class="seg" role="radiogroup" aria-label="Wypełnienie">
-            <label><input type="radio" name="wyp" value="prety" checked><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32M4 11h32M4 17h32M4 23h32"/></svg><span>Pręty wzdłużne</span></label>
-            <label><input type="radio" name="wyp" value="tralki"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32M4 24h32M11 4v20M17 4v20M23 4v20M29 4v20"/></svg><span>Tralki pionowe</span></label>
-            <label><input type="radio" name="wyp" value="szklo"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32"/><rect x="8" y="8" width="24" height="15" rx="1"/><path d="M13 20l8-9" opacity=".5"/></svg><span>Szkło bezpieczne</span></label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Pochwyt</legend>
-          <div class="seg seg-2" role="radiogroup" aria-label="Pochwyt">
-            <label><input type="radio" name="poch" value="metal" checked><span>Z tego samego metalu</span></label>
-            <label><input type="radio" name="poch" value="drewno"><span>Drewniany</span></label>
-          </div>
-        </fieldset>
-        <fieldset class="pola">
-          <legend>Kilka szczegółów</legend>
-          <div class="pola-siatka">
-            <label class="pole"><span>Długość balustrady</span><span class="z-jedn"><input id="dl" name="dl" type="text" inputmode="decimal" maxlength="6" placeholder="np. 8"><i>mb</i></span></label>
-            <label class="pole"><span>Gdzie</span><select id="pietro" name="pietro">
-              <option value="">wybierz</option>
-              <option>parter - piętro</option>
-              <option>piętro - poddasze</option>
-              <option>przez kilka kondygnacji</option>
-              <option>taras lub balkon</option>
-              <option>antresola lub galeria</option>
-            </select></label>
-            <label class="pole"><span>Miejscowość</span><input id="miasto" name="miasto" type="text" autocomplete="address-level2" placeholder="np. Poznań"></label>
-            <label class="pole"><span>Imię (opcjonalnie)</span><input id="imie" name="imie" type="text" autocomplete="given-name" placeholder="np. Anna"></label>
-            <div class="pole pole-foto">
-              <span>Zdjęcie schodów (opcjonalnie)</span>
-              <label class="foto-btn" for="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg><span id="fotoNap">Dodaj zdjęcie</span></label>
-              <input id="foto" type="file" accept="image/*">
-              <img id="fotoPodglad" alt="" hidden>
-            </div>
-          </div>
-        </fieldset>
-        <div class="podsum">
-          <h3>Twoje zapytanie</h3>
-          <pre id="tresc"></pre>
-          <p class="podsum-uw" id="fotoUw" hidden>Zdjęcie dołącz w otwartej wiadomości, przeglądarka nie dołącza plików sama.</p>
-          <div class="akcje">
-            <button class="btn btn-g" type="button" id="wyslijZFoto" hidden>Wyślij ze zdjęciem</button>
-            <a class="btn btn-g" id="mailBtn" href="mailto:biuro@balustrady-skrzypinski.pl">Wyślij e-mailem</a>
-            <a class="btn btn-o" id="smsBtn" href="sms:+48600458425">Wyślij SMS-em</a>
-            <a class="btn btn-o" href="tel:+48600458425">Zadzwoń 600 458 425</a>
-          </div>
-        </div>
-      </form>
-    </div>
   </div>
 </section>
 
