@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Balustrady i karnisze gięte z mosiądzu i stali - Balustrady Skrzypiński, Stęszew k. Poznania</title>
+<meta name="description" content="Producent balustrad i karniszy giętych po łuku z mosiądzu i stali nierdzewnej. Od 1989 roku, Skrzynki k. Stęszewa pod Poznaniem. Pomiar, projekt, gięcie, wykończenie i montaż.">
+<meta name="theme-color" content="#f6f2ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23f6f2ea' stroke='%23a37a4e' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-style='italic' font-size='28' text-anchor='middle' fill='%234a3426'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css?v=1">
+<link rel="preload" as="image" href="img/hero.jpg">
+</head>
+<body>
+<!-- Wizualizacja koncepcyjna nowej strony glownej. Tresci i zdjecia pochodza z balustrady-skrzypinski.pl. -->
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#top" aria-label="Balustrady Andrzej Skrzypiński - początek strony">
+      <svg class="logo-znak" viewBox="0 0 48 48" aria-hidden="true">
+        <defs><linearGradient id="lgBraz" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c79a6a"/><stop offset=".5" stop-color="#8d5f3a"/><stop offset="1" stop-color="#b98a5c"/></linearGradient></defs>
+        <circle cx="24" cy="24" r="22.2" fill="none" stroke="url(#lgBraz)" stroke-width="1.6"/>
+        <text x="24" y="31.5" text-anchor="middle" class="logo-as">AS</text>
+      </svg>
+      <span class="logo-txt"><b>BALUSTRADY</b><small>ANDRZEJ SKRZYPIŃSKI</small></span>
+    </a>
+    <nav class="menu" aria-label="Menu główne">
+      <a href="#balustrady">Balustrady</a>
+      <a href="#karnisze">Karnisze</a>
+      <a href="#meble">Meble z mosiądzu</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#pracownia">Pracownia</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+48600458425" aria-label="Zadzwoń: 600 458 425">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      <span>600 458 425</span>
+    </a>
+    <button class="ham" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span></button>
+  </div>
+  <div class="panel" id="panel" hidden>
+    <nav aria-label="Menu mobilne">
+      <a href="#giecie">Gięcie po łuku</a>
+      <a href="#dobierz">Dobierz wykończenie</a>
+      <a href="#balustrady">Balustrady</a>
+      <a href="#karnisze">Karnisze gięte</a>
+      <a href="#meble">Meble z mosiądzu</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#pracownia">Pracownia i usługi</a>
+      <a href="#kontakt">Kontakt i dojazd</a>
+    </nav>
+    <p class="panel-kontakt">kom. <a href="tel:+48600458425">600 458 425</a><br>tel./fax 61 819 61 97<br><a href="mailto:biuro@balustrady-skrzypinski.pl">biuro@balustrady-skrzypinski.pl</a></p>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <figure class="hero-foto">
+    <img src="img/hero.jpg" width="500" height="747" alt="Drewniane schody kręcone z giętą balustradą z mosiądzu patynowanego">
+    <img class="hero-detal" src="img/hero-detal.jpg" width="500" height="747" alt="Słupek z mosiądzu zakończony kulą, z pochwytem">
+    <figcaption>Pręty z mosiądzu patynowanego gięte wzdłuż biegu schodów</figcaption>
+  </figure>
+  <div class="hero-in">
+    <p class="hero-adres">Pracownia w Skrzynkach koło Stęszewa, pod Poznaniem</p>
+    <h1 id="h1">Balustrady i karnisze gięte po łuku</h1>
+    <p class="lead">Z mosiądzu i stali nierdzewnej, od 1989 roku. Gniemy rury po krzywoliniowym torze bez zmiany średnicy i bez osłabienia w zgięciu, a potem polerujemy, patynujemy albo matowimy.</p>
+    <div class="hero-cta">
+      <a class="btn btn-g" href="#dobierz">Dobierz wykończenie</a>
+      <a class="link" href="#realizacje">Zobacz realizacje</a>
+    </div>
+  </div>
+</section>
+
+<section class="sek giecie" id="giecie" aria-labelledby="h-giecie">
+  <div class="wrap giecie-in">
+    <div class="giecie-txt">
+      <h2 id="h-giecie">Łuk, który zachowuje przekrój</h2>
+      <p>Specjalnością pracowni jest gięcie rur po krzywoliniowym torze, z zachowaniem niezmiennej średnicy i parametrów wytrzymałościowych w zgięciach. Pochwyt prowadzi więc dłoń jednym, równym profilem przez cały bieg schodów, także na zakrętach i spocznikach.</p>
+      <p>Rury łączymy przez skręcanie. To technika, którą przez lata dopracowaliśmy tak, żeby połączenia nie przerywały linii balustrady.</p>
+      <dl class="mat-lista">
+        <div><dt>Materiały</dt><dd>mosiądz, stal chromowo-niklowa (nierdzewna), także miedź</dd></div>
+        <div><dt>Wykończenia</dt><dd>polerowanie, patynowanie, matowienie</dd></div>
+        <div><dt>Ochrona mosiądzu</dt><dd>transparentny lakier proszkowy poliestrowy, w połysku albo w macie</dd></div>
+      </dl>
+    </div>
+    <figure class="rysunek" aria-label="Rysunek: rura gięta po łuku ma ten sam przekrój na prostym odcinku i w zgięciu">
+      <svg viewBox="0 0 600 400" role="img">
+        <title>Przekrój rury na prostym odcinku i w zgięciu jest taki sam</title>
+        <defs>
+          <linearGradient id="gRura" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e9d6a8"/><stop offset=".5" stop-color="#d4b678"/><stop offset="1" stop-color="#b8955a"/>
+          </linearGradient>
+          <pattern id="kresk" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#6b5532" stroke-width="1.2"/></pattern>
+          <marker id="strz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1 10 5 0 9z" fill="#3a332c"/></marker>
+        </defs>
+        <g class="rys-siatka" stroke="#e4dccd" stroke-width="1">
+          <path d="M0 40H600M0 120H600M0 200H600M0 280H600M0 360H600M80 0V400M200 0V400M320 0V400M440 0V400M560 0V400"/>
+        </g>
+        <path class="rys-rura" d="M40 286H230A106 106 0 0 0 336 180V40H364V180A134 134 0 0 1 230 314H40Z" fill="url(#gRura)"/>
+        <g fill="none" stroke="#2f2924" stroke-width="1.6">
+          <path class="rys-sciana" d="M40 286H230A106 106 0 0 0 336 180V40"/>
+          <path class="rys-sciana" d="M40 314H230A134 134 0 0 0 364 180V40"/>
+        </g>
+        <path d="M24 300H230A120 120 0 0 0 350 180V24" fill="none" stroke="#8a6d43" stroke-width="1" stroke-dasharray="14 4 2 4"/>
+        <g stroke="#3a332c" stroke-width="1.2" fill="none">
+          <path d="M120 262V276M120 324V338"/>
+          <path d="M120 262H104" marker-end="url(#strz)"/>
+          <path d="M120 338H104" marker-end="url(#strz)"/>
+          <path d="M285.8 235.8L295.7 245.7M329.6 279.6L339.5 289.5"/>
+          <path d="M285.8 235.8L274.5 247.1" marker-end="url(#strz)"/>
+          <path d="M339.5 289.5L328.2 300.8" marker-end="url(#strz)"/>
+        </g>
+        <g class="rys-lit" font-size="15">
+          <text x="94" y="258">A</text><text x="94" y="352">A</text>
+          <text x="262" y="246">B</text><text x="318" y="314">B</text>
+        </g>
+        <g transform="translate(470 104)">
+          <circle r="44" fill="url(#kresk)" stroke="#2f2924" stroke-width="1.6"/>
+          <circle r="36" fill="#fbf8f2" stroke="#2f2924" stroke-width="1.4"/>
+          <path d="M-36 0H36" stroke="#3a332c" stroke-width="1" marker-start="url(#strz)" marker-end="url(#strz)"/>
+          <text class="rys-lit" x="0" y="-8" text-anchor="middle" font-size="16">Ø d</text>
+          <text class="rys-lit" x="0" y="70" text-anchor="middle" font-size="15">przekrój A-A</text>
+        </g>
+        <g transform="translate(470 268)">
+          <ellipse rx="52" ry="34" fill="none" stroke="#9b8f80" stroke-width="1" stroke-dasharray="4 4"/>
+          <circle r="44" fill="url(#kresk)" stroke="#2f2924" stroke-width="1.6"/>
+          <circle r="36" fill="#fbf8f2" stroke="#2f2924" stroke-width="1.4"/>
+          <path d="M-36 0H36" stroke="#3a332c" stroke-width="1" marker-start="url(#strz)" marker-end="url(#strz)"/>
+          <text class="rys-lit" x="0" y="-8" text-anchor="middle" font-size="16">Ø d</text>
+          <text class="rys-lit" x="0" y="70" text-anchor="middle" font-size="15">przekrój B-B, w zgięciu</text>
+        </g>
+        <text class="rys-uw" x="40" y="380" font-size="13">Linia przerywana wokół B-B: owalizacja rury, której przy gięciu nie dopuszczamy</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="sek dobierz" id="dobierz" aria-labelledby="h-dobierz">
+  <div class="wrap">
+    <div class="sek-glowa">
+      <h2 id="h-dobierz">Dobierz wykończenie</h2>
+      <p>Wybierz metal, kształt i wypełnienie. Rysunek zmienia się od razu, a na końcu wyślesz gotowe zapytanie mailem albo SMS-em. Odpowiadamy z wyceną po rozmowie i pomiarze.</p>
+    </div>
+    <div class="konf">
+      <div class="scena-box">
+        <div class="scena" id="scena" aria-live="polite">
+          <svg id="scenaSvg" viewBox="0 0 800 500" role="img" aria-label="Podgląd balustrady"></svg>
+        </div>
+        <p class="scena-opis" id="scenaOpis">Mosiądz patynowany, schodowa gięta po łuku, pręty wzdłużne</p>
+      </div>
+      <form class="opcje" id="konf" novalidate>
+        <fieldset>
+          <legend>Materiał i wykończenie</legend>
+          <div class="mat" role="radiogroup" aria-label="Materiał i wykończenie">
+            <label><input type="radio" name="mat" value="mos-pol"><span class="pr" data-m="mos-pol"></span><b>Mosiądz polerowany</b><small>wysoki połysk, ciepłe złoto</small></label>
+            <label><input type="radio" name="mat" value="mos-pat" checked><span class="pr" data-m="mos-pat"></span><b>Mosiądz patynowany</b><small>przyciemniony, głęboki brąz</small></label>
+            <label><input type="radio" name="mat" value="mos-mat"><span class="pr" data-m="mos-mat"></span><b>Mosiądz matowy</b><small>satynowy, bez refleksów</small></label>
+            <label><input type="radio" name="mat" value="st-pol"><span class="pr" data-m="st-pol"></span><b>Stal nierdzewna polerowana</b><small>lustrzany połysk</small></label>
+            <label><input type="radio" name="mat" value="st-szcz"><span class="pr" data-m="st-szcz"></span><b>Stal nierdzewna szczotkowana</b><small>mat z rysunkiem szlifu</small></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Rodzaj</legend>
+          <div class="seg" role="radiogroup" aria-label="Rodzaj balustrady">
+            <label><input type="radio" name="typ" value="prosta"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 26h8v-5h6v-5h6v-5h6V6h10"/><path d="M4 16 30 2h8"/></svg><span>Schodowa prosta</span></label>
+            <label><input type="radio" name="typ" value="luk" checked><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 24c10 4 22 2 30-8 3-4 5-9 6-14"/><path d="M2 14c10 4 20 1 27-8"/></svg><span>Schodowa gięta po łuku</span></label>
+            <label><input type="radio" name="typ" value="taras"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M2 24h36"/><path d="M2 8h28c4 0 8-2 8-5"/><path d="M8 8v16M20 8v16M32 7v17"/></svg><span>Tarasowa lub balkonowa</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Wypełnienie</legend>
+          <div class="seg" role="radiogroup" aria-label="Wypełnienie">
+            <label><input type="radio" name="wyp" value="prety" checked><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32M4 11h32M4 17h32M4 23h32"/></svg><span>Pręty wzdłużne</span></label>
+            <label><input type="radio" name="wyp" value="tralki"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32M4 24h32M11 4v20M17 4v20M23 4v20M29 4v20"/></svg><span>Tralki pionowe</span></label>
+            <label><input type="radio" name="wyp" value="szklo"><svg viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4v22M36 4v22M4 4h32"/><rect x="8" y="8" width="24" height="15" rx="1"/><path d="M13 20l8-9" opacity=".5"/></svg><span>Szkło bezpieczne</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Pochwyt</legend>
+          <div class="seg seg-2" role="radiogroup" aria-label="Pochwyt">
+            <label><input type="radio" name="poch" value="metal" checked><span>Z tego samego metalu</span></label>
+            <label><input type="radio" name="poch" value="drewno"><span>Drewniany</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="pola">
+          <legend>Kilka szczegółów</legend>
+          <div class="pola-siatka">
+            <label class="pole"><span>Długość balustrady</span><span class="z-jedn"><input id="dl" name="dl" type="text" inputmode="decimal" maxlength="6" placeholder="np. 8"><i>mb</i></span></label>
+            <label class="pole"><span>Gdzie</span><select id="pietro" name="pietro">
+              <option value="">wybierz</option>
+              <option>parter - piętro</option>
+              <option>piętro - poddasze</option>
+              <option>przez kilka kondygnacji</option>
+              <option>taras lub balkon</option>
+              <option>antresola lub galeria</option>
+            </select></label>
+            <label class="pole"><span>Miejscowość</span><input id="miasto" name="miasto" type="text" autocomplete="address-level2" placeholder="np. Poznań"></label>
+            <label class="pole"><span>Imię (opcjonalnie)</span><input id="imie" name="imie" type="text" autocomplete="given-name" placeholder="np. Anna"></label>
+            <div class="pole pole-foto">
+              <span>Zdjęcie schodów (opcjonalnie)</span>
+              <label class="foto-btn" for="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg><span id="fotoNap">Dodaj zdjęcie</span></label>
+              <input id="foto" type="file" accept="image/*">
+              <img id="fotoPodglad" alt="" hidden>
+            </div>
+          </div>
+        </fieldset>
+        <div class="podsum">
+          <h3>Twoje zapytanie</h3>
+          <pre id="tresc"></pre>
+          <p class="podsum-uw" id="fotoUw" hidden>Zdjęcie dołącz w otwartej wiadomości, przeglądarka nie dołącza plików sama.</p>
+          <div class="akcje">
+            <button class="btn btn-g" type="button" id="wyslijZFoto" hidden>Wyślij ze zdjęciem</button>
+            <a class="btn btn-g" id="mailBtn" href="mailto:biuro@balustrady-skrzypinski.pl">Wyślij e-mailem</a>
+            <a class="btn btn-o" id="smsBtn" href="sms:+48600458425">Wyślij SMS-em</a>
+            <a class="btn btn-o" href="tel:+48600458425">Zadzwoń 600 458 425</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sek balustrady" id="balustrady" aria-labelledby="h-bal">
+  <div class="wrap">
+    <div class="sek-glowa sek-glowa-2">
+      <h2 id="h-bal">Balustrady schodowe, tarasowe i balkonowe</h2>
+      <div>
+        <p>Wykonujemy balustrady z mosiądzu, ze stali nierdzewnej i z miedzi, na życzenie łączone z drewnem albo z wypełnieniem ze szkła bezpiecznego. Każdą robimy na indywidualne zamówienie, według wymiarów i wytycznych klienta, do wnętrz nowoczesnych i klasycznych.</p>
+        <p>W ofercie są też pochwyty przyścienne oraz balustrady antybakteryjne Cu+, sprawdzające się w szpitalach, hotelach i biurowcach.</p>
+      </div>
+    </div>
+    <div class="trzy">
+      <figure class="kadr">
+        <button class="zoom" type="button" data-src="img/b-mos-2.jpg" data-cap="Wypełnienie wzdłużne, mosiądz patynowany"><img src="img/b-mos-2.jpg" width="659" height="500" loading="lazy" alt="Balustrada gięta z mosiądzu patynowanego z prętami wzdłużnymi"></button>
+        <figcaption><b>Wypełnienie wzdłużne</b>Pręty prowadzone równolegle do pochwytu, gięte razem z nim.</figcaption>
+      </figure>
+      <figure class="kadr">
+        <button class="zoom" type="button" data-src="img/b-mos-12.jpg" data-cap="Tralki pionowe, mosiądz polerowany"><img src="img/b-mos-12.jpg" width="469" height="500" loading="lazy" alt="Balustrada z mosiądzu polerowanego z tralkami pionowymi przy schodach kręconych"></button>
+        <figcaption><b>Tralki pionowe</b>Klasyczny rytm pionowych prętów, także na schodach kręconych.</figcaption>
+      </figure>
+      <figure class="kadr">
+        <button class="zoom" type="button" data-src="img/b-st-8.jpg" data-cap="Szkło bezpieczne z drewnianym pochwytem, stal nierdzewna matowa"><img src="img/b-st-8.jpg" width="747" height="500" loading="lazy" alt="Balustrada ze stali nierdzewnej ze szkłem bezpiecznym i drewnianym pochwytem"></button>
+        <figcaption><b>Szkło bezpieczne</b>Tafle w uchwytach ze stali, tu z drewnianym pochwytem.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sek karnisze" id="karnisze" aria-labelledby="h-karn">
+  <div class="wrap karn-in">
+    <figure class="karn-duze">
+      <button class="zoom" type="button" data-src="img/k-1.jpg" data-cap="Karnisz gięty po łuku przejścia, mosiądz patynowany"><img src="img/k-1.jpg" width="668" height="500" loading="lazy" alt="Karnisz z mosiądzu gięty po łuku przejścia między pokojami"></button>
+    </figure>
+    <div class="karn-txt">
+      <h2 id="h-karn">Karnisze gięte z mosiądzu i stali</h2>
+      <p>Karnisz wygięty dokładnie po łuku okna, wykusza albo przejścia. Robimy je z mosiądzu i ze stali chromowo-niklowej, w kilkunastu rodzajach, z szerokim wyborem końcówek o różnych kształtach.</p>
+      <ul class="lista-kres">
+        <li>karnisze pojedyncze i podwójne</li>
+        <li>podwójne rozporowe</li>
+        <li>skrętne</li>
+        <li>rozety, czyli embrasy do upięcia zasłon</li>
+      </ul>
+    </div>
+    <div class="karn-pas">
+      <button class="zoom" type="button" data-src="img/k-2.jpg" data-cap="Karnisz gięty nad półokrągłym oknem, mosiądz patynowany"><img src="img/k-2.jpg" width="668" height="500" loading="lazy" alt="Karnisz gięty nad półokrągłym oknem"></button>
+      <button class="zoom" type="button" data-src="img/k-3.jpg" data-cap="Karnisz podwójny gięty, mosiądz polerowany"><img src="img/k-3.jpg" width="633" height="500" loading="lazy" alt="Karnisz podwójny gięty z mosiądzu polerowanego"></button>
+      <button class="zoom" type="button" data-src="img/k-6.jpg" data-cap="Karnisz skrętny, mosiądz patynowany"><img src="img/k-6.jpg" width="747" height="500" loading="lazy" alt="Karnisz skrętny z mosiądzu patynowanego"></button>
+      <button class="zoom" type="button" data-src="img/k-7.jpg" data-cap="Rozeta, mosiądz polerowany"><img src="img/k-7.jpg" width="750" height="500" loading="lazy" alt="Rozeta z mosiądzu polerowanego przytrzymująca zasłonę"></button>
+    </div>
+  </div>
+</section>
+
+<section class="sek meble" id="meble" aria-labelledby="h-meble">
+  <div class="wrap meble-in">
+    <div class="meble-txt">
+      <h2 id="h-meble">Meble i detale z mosiądzu</h2>
+      <p>Mosiądz jest wytrzymały, odporny na korozję i łatwo utrzymać go w czystości, a przy tym daje się kształtować niemal dowolnie. Złotawy kolor ociepla wnętrze i dobrze wygląda przy szarościach, bieli i czerni.</p>
+      <p>Na indywidualne zamówienie wykonujemy:</p>
+      <ul class="lista-kres kol-2">
+        <li>hokery barowe i bary</li>
+        <li>wieszaki</li>
+        <li>kolumny</li>
+        <li>relingi kuchenne</li>
+        <li>poręcze przyścienne</li>
+        <li>pręty schodowe</li>
+      </ul>
+      <p>Mosiądz może mieć połysk albo zostać pozostawiony sam sobie, wtedy pokrywa się naturalną patyną. Przy współpracy z architektem lub dekoratorem wnętrz podejmujemy się wykonania wystroju całego wnętrza.</p>
+    </div>
+    <div class="meble-foto">
+      <figure>
+        <button class="zoom" type="button" data-src="img/p-1.jpg" data-cap="Poręcz przyścienna z mosiądzu polerowanego"><img src="img/p-1.jpg" width="747" height="500" loading="lazy" alt="Zakończenie poręczy przyściennej z mosiądzu polerowanego"></button>
+        <figcaption>Poręcz przyścienna, mosiądz polerowany</figcaption>
+      </figure>
+      <figure>
+        <button class="zoom" type="button" data-src="img/spirala.jpg" data-cap="Słupek z kulą i gięte pręty, mosiądz patynowany"><img src="img/spirala.jpg" width="747" height="500" loading="lazy" alt="Słupek z mosiądzu z kulą, owinięty giętymi prętami"></button>
+        <figcaption>Słupek z kulą i pręty gięte spiralnie</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sek realizacje" id="realizacje" aria-labelledby="h-real">
+  <div class="wrap">
+    <div class="sek-glowa real-glowa">
+      <h2 id="h-real">Realizacje</h2>
+      <div class="filtry" role="tablist" aria-label="Filtr realizacji">
+        <button type="button" role="tab" aria-selected="true" data-f="all">Wszystkie</button>
+        <button type="button" role="tab" aria-selected="false" data-f="mos">Mosiądz</button>
+        <button type="button" role="tab" aria-selected="false" data-f="st">Stal nierdzewna</button>
+        <button type="button" role="tab" aria-selected="false" data-f="k">Karnisze</button>
+      </div>
+    </div>
+    <div class="galeria" id="galeria"></div>
+    <p class="gal-uw">Zdjęcia z dotychczasowych realizacji pracowni. Dotknij zdjęcia, żeby je powiększyć.</p>
+  </div>
+</section>
+
+<section class="sek wspolpraca" id="wspolpraca" aria-labelledby="h-wsp">
+  <div class="wrap wsp-in">
+    <div class="wsp-glowa">
+      <h2 id="h-wsp">Jak pracujemy</h2>
+      <p>Prowadzimy całe zlecenie sami, od pomiaru do montażu. Jesteśmy otwarci na własne pomysły klientów i chętnie pracujemy z architektami.</p>
+      <figure class="wsp-foto">
+        <button class="zoom" type="button" data-src="img/fala.jpg" data-cap="Balustrada z falującymi prętami, mosiądz patynowany"><img src="img/fala.jpg" width="747" height="500" loading="lazy" alt="Balustrada z mosiądzu z falującymi prętami przy schodach z drewna"></button>
+      </figure>
+    </div>
+    <dl class="kroki">
+      <div><dt>Pomiar</dt><dd>Przyjeżdżamy i mierzymy schody, taras, balkon albo okno na miejscu.</dd></div>
+      <div><dt>Projekt</dt><dd>Przygotowujemy projekt techniczny i pokazujemy go na wizualizacji 3D, żeby można było wybrać wariant przed wykonaniem.</dd></div>
+      <div><dt>Gięcie i wykonanie</dt><dd>Gniemy, łączymy, szlifujemy i wykańczamy elementy we własnej pracowni w Skrzynkach.</dd></div>
+      <div><dt>Dostawa i montaż</dt><dd>Przywozimy i montujemy, a w razie potrzeby później serwisujemy.</dd></div>
+      <div class="obszar"><dt>Obszar</dt><dd>Najwięcej naszych realizacji jest w Poznaniu i w Wielkopolsce, ale pracujemy też dla klientów z innych części Polski i z zagranicy.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sek pracownia" id="pracownia" aria-labelledby="h-prac">
+  <div class="wrap prac-in">
+    <div class="list">
+      <h2 id="h-prac">Pracownia w Skrzynkach</h2>
+      <p>Na rynku jesteśmy od 1989 roku. Poza balustradami i karniszami wykonujemy wyroby metalowe dla budownictwa i przemysłu. Rozbudowany park maszynowy pozwala nam przyjmować też zlecenia usługowe.</p>
+      <p>Zapraszamy do zapoznania się z ofertą i do kontaktu.</p>
+      <p class="podpis">Andrzej Skrzypiński</p>
+    </div>
+    <dl class="park">
+      <div><dt>Obróbka skrawaniem</dt><dd>tokarki uniwersalne i rewolwerowe, automaty tokarskie, frezarki pionowe i poziome, strugarka, szlifierki do płaszczyzn i wałków, wiertarki</dd></div>
+      <div><dt>Obróbka plastyczna</dt><dd>giętarko-walcarki do rur, prasy mimośrodowe od 6 do 40 T, tłoczenie na prasach hydraulicznych 10 i 40 T, walcarka do blachy, nożyce gilotynowe 2 m do 3,5 mm, hartowanie i wyżarzanie</dd></div>
+      <div><dt>Szlifiernia i polernia</dt><dd>szlifowanie na pasach bezkońcowych, matowanie, polerowanie, 18-stanowiskowy automat polerski, chemiczne patynowanie metali kolorowych</dd></div>
+      <div><dt>Lakiernia proszkowa</dt><dd>aplikacja GEMA, piec 3000 × 1000 × 1000 mm, transparentny poliester w połysku i macie (specjalność: lakierowanie mosiądzu), kolory z palety RAL</dd></div>
+      <div><dt>Spawalnia</dt><dd>spawanie w osłonie argonu mosiądzu, aluminium i miedzi, spawanie stali i żeliwa</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sek kontakt" id="kontakt" aria-labelledby="h-kont">
+  <div class="wrap kont-in">
+    <div class="kont-txt">
+      <h2 id="h-kont">Kontakt i dojazd</h2>
+      <p class="firma">BALUSTRADY SKRZYPIŃSKI Sp. z o.o.<br>Skrzynki, ul. Leśna 2<br>62-060 Stęszew</p>
+      <dl class="dane">
+        <div><dt>Komórka</dt><dd><a href="tel:+48600458425">600 458 425</a></dd></div>
+        <div><dt>Tel./fax</dt><dd><a href="tel:+48618196197">61 819 61 97</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:biuro@balustrady-skrzypinski.pl">biuro@balustrady-skrzypinski.pl</a></dd></div>
+        <div><dt>Wystawa</dt><dd>stała wystawa i sprzedaż w godz. 6-16</dd></div>
+      </dl>
+      <div class="kont-akcje">
+        <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&amp;destination=52.348037,16.595520" target="_blank" rel="noopener">Wyznacz trasę</a>
+        <a class="btn btn-o" href="mailto:biuro@balustrady-skrzypinski.pl">Napisz e-mail</a>
+      </div>
+      <p class="nip">NIP 777-32-48-102 · REGON 361126394</p>
+    </div>
+    <div class="mapa" id="mapa" role="region" aria-label="Mapa dojazdu do Skrzynek"></div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap stopka-in">
+    <img src="img/logo.png" width="116" height="67" alt="Logo Balustrady Andrzej Skrzypiński" loading="lazy">
+    <p>© BALUSTRADY SKRZYPIŃSKI Sp. z o.o. · producent balustrad i karniszy giętych · Skrzynki, ul. Leśna 2, 62-060 Stęszew</p>
+    <p class="stopka-uw">Wizualizacja koncepcyjna nowej strony głównej. Teksty i zdjęcia pochodzą z obecnej strony balustrady-skrzypinski.pl.</p>
+  </div>
+</footer>
+
+<div class="mob" id="mob" aria-hidden="true">
+  <a class="mob-tel" href="tel:+48600458425" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Zadzwoń</a>
+  <a class="mob-cta" href="#dobierz" tabindex="-1">Dobierz wykończenie</a>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <button class="lb-x" type="button" aria-label="Zamknij">×</button>
+  <button class="lb-p" type="button" aria-label="Poprzednie zdjęcie">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb-n" type="button" aria-label="Następne zdjęcie">›</button>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="app.js?v=1" defer></script>
+</body>
+</html>
