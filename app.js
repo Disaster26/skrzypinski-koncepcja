@@ -20,15 +20,6 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) zamknij(); });
   window.addEventListener('resize', function () { if (innerWidth > 1024) zamknij(); });
 
-  /* ---------- rysunek giecia ---------- */
-  var rys = $('.rysunek');
-  if ('IntersectionObserver' in window && rys) {
-    var ioR = new IntersectionObserver(function (en) {
-      en.forEach(function (x) { if (x.isIntersecting) { rys.classList.add('widac'); ioR.disconnect(); } });
-    }, { threshold: 0.25 });
-    ioR.observe(rys);
-  } else if (rys) rys.classList.add('widac');
-
   /* ---------- dolny pasek na telefonie ---------- */
   var mob = $('#mob'), heroCta = $('.hero-cta');
   var zaCta = false;
